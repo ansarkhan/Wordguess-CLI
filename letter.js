@@ -1,26 +1,28 @@
-function Letter(str, state) {
-    this.str = str;
-    this.state = state;
+class Letter {
+    constructor(str, state) {
+        this.str = str;
+        this.state = state || false ;
+    }
 
-    this.checker = function(let) {
-        if (this.str == let) {
+    checker(ltr) {
+        if (this.str == ltr) {
             this.state = true;
         } else {
             this.state = false;
         }
     };
 
-    this.display = function() {
+    display() {
         if (this.state == true) {
-            return str
+            return this.str
         } else {
             return '_'
         }
     };
 };
 
-// var myLet = new Letter('a', false)
-// // myLet.checker('a');
+var myLet = new Letter('a')
+// myLet.checker('a');
 // console.log(myLet.state);
 // console.log(myLet.display());
 
