@@ -4,19 +4,20 @@ class Letter {
         this.state = state || false ;
     }
 
-    checker(ltr) {
-        if (this.str == ltr) {
-            this.state = true;
-        } else {
-            this.state = false;
-        }
-    };
 
     display() {
         if (this.state == true) {
             return this.str
         } else {
             return '_'
+        }
+    };
+
+    checker(ltr) {
+        if (this.str == ltr) {
+            this.state = true;
+        } else {
+            this.state = false;
         }
     };
 };
